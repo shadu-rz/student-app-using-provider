@@ -7,7 +7,7 @@ import 'package:image_picker/image_picker.dart';
 
 class StudentProvider extends ChangeNotifier {
   List<StudentModel> studentList = [];
-  List<StudentModel> foundeddata = [];
+  List<StudentModel> foundedData = [];
 
   File? fileimage;
 
@@ -96,7 +96,7 @@ class StudentProvider extends ChangeNotifier {
   Future<void> searchResults() async {
     alldata = studentList;
 
-    foundeddata = alldata;
+    foundedData = alldata;
     notifyListeners();
   }
 
@@ -112,8 +112,8 @@ class StudentProvider extends ChangeNotifier {
           .toList();
     }
 
-    foundeddata = results;
-    log(foundeddata.toString());
+    foundedData = results;
+    log(foundedData.toString());
     notifyListeners();
   }
 }

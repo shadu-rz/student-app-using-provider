@@ -47,7 +47,7 @@ class SearchStudentList extends StatelessWidget {
                 return ListView.separated(
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      final data = value.foundeddata[index];
+                      final data = value.foundedData[index];
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: ListTile(
@@ -118,7 +118,7 @@ class SearchStudentList extends StatelessWidget {
                       );
                     },
                     separatorBuilder: (context, index) => const Divider(),
-                    itemCount: value.foundeddata.length);
+                    itemCount: value.foundedData.length);
               })
             ],
           );
