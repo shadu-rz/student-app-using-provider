@@ -12,7 +12,7 @@ class SearchStudentList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_){
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       Provider.of<StudentProvider>(context, listen: false).searchResults();
     });
     return Scaffold(
@@ -28,7 +28,8 @@ class SearchStudentList extends StatelessWidget {
                       onChanged: (value) {
                         provider.updateList(value);
                       },
-                      style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
                       padding: const EdgeInsets.all(12),
                       prefixIcon: Icon(
                         Icons.search,
@@ -64,10 +65,12 @@ class SearchStudentList extends StatelessWidget {
                               ),
                             );
                           },
-                          title: Text(data.name.toUpperCase(), style: const TextStyle(fontSize: 15)),
+                          title: Text(data.name.toUpperCase(),
+                              style: const TextStyle(fontSize: 15)),
                           leading: data.photo == null
                               ? const CircleAvatar(
-                                  backgroundImage: AssetImage('Assets/images/avatar (1).png'),
+                                  backgroundImage:
+                                      AssetImage('Assets/images/avatar.jpg'),
                                   radius: 30,
                                 )
                               : CircleAvatar(
@@ -101,7 +104,8 @@ class SearchStudentList extends StatelessWidget {
                               ),
                               IconButton(
                                 onPressed: () {
-                                  final choice = showdialog(value, index, context);
+                                  final choice =
+                                      showdialog(value, index, context);
                                   choice.show(context);
                                   // ChoiceDialog().show(context, barrierColor: Colors.black, barrierDismissible: true);
                                 },
